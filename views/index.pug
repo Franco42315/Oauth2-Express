@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+  body
+    if user
+      h1 Bienvenido! Estás autenticado.
+      p Token de acceso: #{user.access_token}
+      a(href="/logout") Cerrar sesión
+    else
+      h1 Bienvenido! Por favor inicia sesión.
+      a(href="/auth") Login con Google
